@@ -251,8 +251,8 @@ Citizen.CreateThread(function()
                     if isVehicleMarked then
                         local nitroVehicle = GetPlateFromList(prop.plate)
                         if nitroVehicle.amount > 0 then
-                            Citizen.InvokeNative(0xB59E4BD37AE292DB, veh, 5.0)
-                            Citizen.InvokeNative(0x93A3996368C94158, veh, 25.0)
+                            Citizen.InvokeNative(0xB59E4BD37AE292DB, veh, Config.Nitro.Torque )
+                            Citizen.InvokeNative(0x93A3996368C94158, veh, Config.Nitro.Power )
                             nitroUsed = true
                             StartScreenEffect("RaceTurbo", 750, false)
 
